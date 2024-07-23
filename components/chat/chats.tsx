@@ -7,7 +7,7 @@ const Chats = async () => {
     const chats = session?.user ? await getUsersForSidebar(session.user._id): [];
     console.log(chats)
   return (
-    <nav className="flex-1 overflow-y-auto">
+    <nav className="flex-1 overflow-y-auto border-accent-foreground">
         <ul>
             { chats.map(chat => (
                 <Chat key={chat._id} chat={chat}/>
